@@ -1,0 +1,80 @@
+$font-size: 12px;
+$padding-vertical: 10px;
+$padding-left: 58px;
+$height: 34px;
+$svgMultiplier: 2.4;
+$logoTopOffset: -31px;
+$headerFontColour: #fff;
+$sectionHeight: 20px;
+
+%normalise-size {
+  font-size: $font-size !important;
+  line-height: $font-size !important;
+}
+
+%mr {
+  margin-right: 10px !important;
+}
+
+body.hasHelloBar {
+  #hello-bar {
+    height: $height !important;
+
+    > .closeHb {
+      @extend %normalise-size;
+      top: $padding-vertical !important;
+      right: $padding-vertical !important;
+      left: initial !important;
+    }
+
+    > .hbBody {
+      padding: $padding-vertical 0 $padding-vertical $padding-left !important;
+
+      > section {
+        height: $sectionHeight !important;
+
+        &:first-of-type {
+          display: none !important;
+        }
+
+        &:nth-child(2) {
+          > h3 {
+            display: inline !important;
+            color: $headerFontColour;
+            @extend %normalise-size;
+            @extend %mr;
+          }
+
+          > ul {
+            display: inline !important;
+
+            > li {
+              display: inline !important;
+              @extend %normalise-size;
+              @extend %mr;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  %header-btn {
+    width: $font-size * $svgMultiplier !important;
+    height: $font-size * $svgMultiplier !important;
+    line-height: $font-size * $svgMultiplier !important;
+  }
+
+  #show-result > header > h1 {
+    top: $logoTopOffset !important;
+    @extend %header-btn;
+
+    > .changelog-badge {
+      @extend %header-btn;
+
+      > a > svg {
+        @extend %header-btn;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.top_page_alert {
+  display: none !important;
+}
+
+#mgiframe {
+  @extend .top_page_alert;
+
+  + div {
+    @extend .top_page_alert;
+
+    + div {
+      @extend .top_page_alert;
+
+      + div {
+        @extend .top_page_alert;
+      }
+    }
+  }
+}
+
+#containerRoot > div:nth-child(4) > div:nth-child(4) {
+  @extend .top_page_alert;
+}

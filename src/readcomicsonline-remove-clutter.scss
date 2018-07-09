@@ -18,6 +18,12 @@
   }
 }
 
+div > div[id][style*="width"][style*="height"][style*="position"] > div[id] {
+  &[style*="width"][style*="height"][style*="position"][style*="left"][style*="top"] {
+    @extend .top_page_alert;
+  }
+}
+
 #containerRoot > div:nth-child(4) > div:nth-child(4) {
   @extend .top_page_alert;
 }

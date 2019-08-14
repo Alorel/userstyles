@@ -27,6 +27,6 @@
     "gulp-sass": "^4.0.1",
     "ora": "^3.0.0",
     "pretty-bytes": "^5.1.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.7.1"
   }
 }
